@@ -12,6 +12,7 @@
     "vite": "^7.1.2"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "octokit": "^5.0.3"
   }
 }

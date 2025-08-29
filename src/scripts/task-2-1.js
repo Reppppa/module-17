@@ -2,7 +2,7 @@ import settings from "../../data/settings.json";
 
 async function getData() {
   try {
-    const url = `${settings.apiSettings.url}products?limit=10`;
+    const url = `${settings.apiSettings.fakeStore}products?limit=10`;
 
     const res = await fetch(url, {
       method: "GET",
@@ -16,31 +16,29 @@ async function getData() {
 }
 
 
-export class ShowcaseService {
-  async getAllProducts() {
-    return await getData();
-  }
+async function getAllProducts() {
+  return await getData();
+}
 
-  async render () {
-    const products = await this.getAllProducts();
+export async function renderProducts () {
+  const products = await getAllProducts();
 
-    return `
-      <div class="showcase">
-        <h1 class="showcase__title">Каталог товаров</h1>
-        <div class="showcase__list">
-          ${products.map(p => `
-            <div class="showcase__item">
-              <img 
-                  src='${p.image}' 
-                  alt='${p.title}'
-                  class="showcase__item-img" 
-              >
-              <span class="showcase__item-title">${p.title}</span>
-              <span class="showcase__item-price">Цена: ${p.price} $</span>
-            </div>
-          `).join('')}
-        </div>
+  return `
+    <div class="showcase">
+      <h2 class="showcase__title">Task-2-1: Каталог товаров</h2>
+      <div class="showcase__list">
+        ${products.map(p => `
+          <div class="showcase__item">
+            <img 
+                src='${p.image}' 
+                alt='${p.title}'
+                class="showcase__item-img" 
+            >
+            <span class="showcase__item-title">${p.title}</span>
+            <span class="showcase__item-price">Цена: ${p.price} $</span>
+          </div>
+        `).join('')}
       </div>
-    `
-  }
+    </div>
+  `
 }

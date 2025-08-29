@@ -42,3 +42,94 @@
 .showcase__item-price {
     margin-top: auto;
 }
+
+.github {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.github__title {
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.github__inputs {
+    display: flex;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.github__input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.github__button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.github__button:hover {
+    background-color: #218838;
+}
+
+.github__button:disabled {
+    background-color: #94d3a2;
+    cursor: not-allowed;
+}
+
+.github__results {
+    min-height: 100px;
+    margin-top: 20px;
+}
+
+.github-loading, .github-empty, .github-error {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.github-error {
+    color: #dc3545;
+}
+
+.github__list {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.github__item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e1e4e8;
+    transition: background-color 0.2s;
+}
+
+.github__item:last-child {
+    border-bottom: none;
+}
+
+.github__item:hover {
+    background-color: #f6f8fa;
+}
+
+.github__link {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.github__link:hover {
+    text-decoration: underline;
+}
